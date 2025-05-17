@@ -1,0 +1,628 @@
+:root {
+  --primary-color: #004080;
+  --secondary-color: #009688;
+  --accent-color: #fdd835;
+  --dark-color: #2c3e50;
+  --light-color: #f4f6f9;
+  --text-color: #333;
+  --text-light: #777;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --danger-color: #f44336;
+  --white: #ffffff;
+  --gray: #e0e0e0;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.school-info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.login-btn {
+  background-color: var(--accent-color);
+  color: var(--dark-color) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px;
+  font-weight: 600 !important;
+}
+
+.login-btn:hover {
+  background-color: #fbc02d;
+  border-bottom-color: transparent !important;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-badge {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* News Section */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.news-item {
+  border-left: 3px solid var(--secondary-color);
+  padding-left: 1rem;
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.news-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+/* Yearbook Section */
+.yearbook-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.yearbook-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.yearbook-preview {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yearbook-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tech Section */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.tech-tip {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(0, 150, 136, 0.05);
+}
+
+.tech-icon {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.tech-tip h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+/* Announcement Section */
+.announcement {
+  border-left: 5px solid var(--accent-color);
+}
+
+.announcement-content {
+  padding: 1.5rem;
+}
+
+.announcement-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--danger-color);
+  margin-bottom: 1rem;
+}
+
+.announcement-alert i {
+  font-size: 1.5rem;
+}
+
+.announcement-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Events Section */
+.events-calendar {
+  padding: 1.5rem;
+}
+
+.event {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.event:last-child {
+  border-bottom: none;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.event-date .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.event-details h3 {
+  margin-bottom: 0.3rem;
+  color: var(--dark-color);
+}
+
+.event-details p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-link {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-method i {
+  color: var(--secondary-color);
+  width: 20px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--dark-color);
+  color: var(--white);
+  padding: 3rem 0 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  flex: 2;
+  min-width: 300px;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.footer-newsletter {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-newsletter h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.footer-newsletter input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-list {
+    position: fixed;
+    top: 120px;
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    transition: left 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav-list.show {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .yearbook-content, .contact-container, .login-container {
+    flex-direction: column;
+  }
+
+  .yearbook-preview, .login-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .date-badge {
+    align-self: flex-end;
+  }
+  .fade-in-element {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in-element.visible {
+  opacity: 1;
+
+}
+/* Add these to your existing CSS */
+.highlight-section {
+  animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+  0% { box-shadow: 0 0 0 0 rgba(253, 216, 53, 0); }
+  50% { box-shadow: 0 0 0 10px rgba(253, 216, 53, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(253, 216, 53, 0); }
+}
+
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+header {
+  transition: background-position 0.3s ease-out;
+}
+
+/* Add a subtle gradient animation to the header */
+.header-container {
+  animation: gradientShift 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

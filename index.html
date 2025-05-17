@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+You said: <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haile-Manas Academy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Classical touch: Google Fonts for a classic serif typeface -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap">
+  <!-- Classical touch: Simple audio player for classical background music -->
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    h1, h2, .school-info h1 {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
+    }
+    .classical-border {
+      border: 2px solid #a88e56;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #e5dcc4;
+      background: #f7f3ed;
+    }
+    .classical-ornament {
+      text-align: center;
+      font-size: 2rem;
+      color: #a88e56;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .music-player-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5rem auto 0 auto;
+      background: #f7f3ed;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #a88e56;
+      width: fit-content;
+      box-shadow: 0 2px 8px #e5dcc4;
+    }
+    .music-player-container label {
+      color: #a88e56;
+      margin-right: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+    /* Add a subtle parchment background for classical effect */
+    body {
+      background: repeating-linear-gradient(
+        135deg,
+        #f7f3ed,
+        #f7f3ed 80px,
+        #f3efe6 80px,
+        #f3efe6 160px
+      );
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container classical-border">
+      <div class="logo-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKHI688DjGlbOPYrakI5CMDRk0jdDxKh2a_ZEdYMugcQxuPVCoWHMaIdk&s=10" alt="Haile-Manas Academy Logo" class="logo">
+        <div class="school-info">
+          <div class="classical-ornament">❧</div>
+          <h1>Haile-Manas Academy</h1>
+          <p class="tagline">Stay Connected. Stay Informed. Stay Inspired.</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="navList">
+          <li><a href="#news"><i class="fas fa-newspaper"></i> News</a></li>
+          <li><a href="#yearbook"><i class="fas fa-camera"></i> Yearbook</a></li>
+          <li><a href="#tech"><i class="fas fa-tablet-alt"></i> Tech Updates</a></li>
+          <li><a href="#announcement"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+          <li><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="#login" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Classical background music player -->
+    <div class="music-player-container">
+      <label for="classical-music">Classical Mood:</label>
+      <audio id="classical-music" controls>
+        <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9b57d5.mp3" type="audio/mp3">
+        <!-- Example royalty-free classical piece ('Spring' from Vivaldi's Four Seasons, public domain) -->
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </header>
+  <main>
+    <section id="news" class="card classical-border">
+      <div class="section-header">
+        <div class="classical-ornament">✦</div>
+        <h2><i class="fas fa-newspaper"></i> Campus News</h2>
+        <span class="date-badge">May 2023</span>
+      </div>
+      <div class="news-grid">
+        <article class="news-item">
+          <div class="news-date">May 1</div>
+          <h3>Labour Day Celebration</h3>
+          <p>Join us for special activities honoring workers' contributions. Classes resume at 1:00 PM.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </article>
+        <article class="news-item">
+          <div class="news-date">May 5</div>
+          <h3>SAT Exam Week</h3>
+          <p>Seniors will be taking SAT exams this week. Quiet hours enforced near testing areas.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </article>
+      </div>
+    </section>
+    <section id="yearbook" class="card classical-border">
+      <div class="section-header">
+        <div class="classical-ornament">❖</div>
+        <h2><i class="fas fa-camera"></i> Yearbook Zone</h2>
+      </div>
+      <div class="yearbook-content">
+        <div class="yearbook-info">
+          <h3>Capture Your Memories</h3>
+          <p>Submit your favorite moments from this academic year for inclusion in our annual yearbook.</p>
+          <p>Deadline for submissions: June 15, 2023</p>
+          <div class="cta-buttons">
+            <a href="https://forms.gle/YOUR_FORM_LINK" target="_blank" class="btn primary">
+              <i class="fas fa-cloud-upload-alt"></i> Submit Photos
+            </a>
+            <a href="#" class="btn secondary">
+              <i class="fas fa-book-open"></i> View Last Year's Yearbook
+            </a>
+          </div>
+        </div>
+        <div class="yearbook-preview">
+          <img src="https://via.placeholder.com/300x200?text=Yearbook+Preview" alt="Yearbook Preview">
+        </div>
+      </div>
+    </section>
+    <section id="tech" class="card classical-border">
+      <div class="section-header">
+        <div class="classical-ornament">♬</div>
+        <h2><i class="fas fa-tablet-alt"></i> Tech Updates</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-tip">
+          <div class="tech-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Weekly Updates</h3>
+          <p>Remember to update your iPad to the latest version every Sunday evening.</p>
+        </div>
+        <div class="tech-tip">
+          <div class="tech-icon">
+            <i class="fas fa-battery-three-quarters"></i>
+          </div>
+          <h3>Battery Life</h3>
+          <p>Close background apps regularly to conserve battery power throughout the day.</p>
+        </div>
+        <div class="tech-tip">
+          <div class="tech-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Security</h3>
+          <p>Never share your login credentials. Report suspicious activity immediately.</p>
+        </div>
+      </div>
+    </section>
+    <section id="announcement" class="card announcement classical-border">
+      <div class="section-header">
+        <div class="classical-ornament">✺</div>
+        <h2><i class="fas fa-bullhorn"></i> Important Announcement</h2>
+      </div>
+      <div class="announcement-content">
+        <div class="announcement-alert">
+          <i class="fas fa-exclamation-circle"></i>
+          <h3>Whole School Meeting</h3>
+        </div>
+        <p><strong>Date:</strong> May 14, 2023</p>
+        <p><strong>Time:</strong> 12:15 PM</p>
+        <p><strong>Location:</strong> Amphitheater</p>
+        <p>Attendance is mandatory for all students and staff. Please arrive 5 minutes early.</p>
+        <div class="announcement-actions">
+          <a href="#" class="btn outline">
+            <i class="fas fa-calendar-plus"></i> Add to Calendar
+          </a>
+          <a href="https://forms.gle/YOUR_FORM_LINK" target="_blank" class="btn outline">
+            <i class="fas fa-file-upload"></i> Submit Required Documents
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="events" class="card classical-border">
+      <div class="section-header">
+        <div class="classical-ornament">✧</div>
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+      </div>
+      <div class="events-calendar">
+        <div class="event">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">May</span>
+          </div>
+          <div class="event-details">
+            <h3>Science Fair</h3>
+            <p>10:00 AM - 2:00 PM | Science Building</p>
+            <a href="#" class="event-link">More info</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-date">
+            <span class="day">20</span>
+            <span class="month">May</span>
+          </div>
+          <div class="event-details">
+            <h3>Music Recital</h3>
+            <p>6:00 PM | Auditorium</p>
+            <a href="#" class="event-link">More info</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="card classical-border">
+      <div class="section-header">
+        <div class="classical-ornament">✦</div>
+        <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+      </div>
+      <div class="contact-container">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="general">General Inquiry</option>
+              <option value="tech">Technical Support</option>
+              <option value="academic">Academic Questions</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        <div class="contact-info">
+          <h3>Other Ways to Reach Us</h3>
+          <div class="contact-method">
+            <i class="fas fa-phone"></i>
+            <span>+251 123 456 789</span>
+          </div>
+          <div class="contact-method">
+            <i class="fas fa-envelope"></i>
+            <span>info@hailemanas.edu</span>
+          </div>
+          <div class="contact-method">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Academy Road, Addis Ababa</span>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="login" class="card login-section classical-border">
+      <div class="section-header">
+        <div class="classical-ornament">❦</div>
+        <h2><i class="fas fa-user"></i> Student Portal</h2>
+      </div>
+      <div class="login-container">
+        <div class="login-image">
+          <img src="https://via.placeholder.com/400?text=Student+Portal" alt="Student Portal">
+        </div>
+        <form class="login-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" name="remember"> Remember me
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn primary">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </button>
+          <div class="login-help">
+            <p>Need help accessing your account? <a href="#">Contact IT Support</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container classical-border">
+      <div class="footer-logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKHI688DjGlbOPYrakI5CMDRk0jdDxKh2a_ZEdYMugcQxuPVCoWHMaIdk&s=10" alt="Haile-Manas Academy Logo">
+        <p>Empowering the next generation of African leaders through excellence in education.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Student Handbook</a></li>
+          <li><a href="#">Library Resources</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Stay Updated</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn outline">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Haile-Manas Academy. All rights reserved.</p>
+      <p>Built for the students, by the students</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>Make this better
+<!-- partial -->
+  <script src='https://aframe.io/releases/1.2.0/aframe.min.js%0A'></script>
+<script src='https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js%0A'></script>
+</body>
+</html>
